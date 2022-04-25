@@ -17,7 +17,7 @@
         <nav>
             <ul class="list">
                 <li>
-                    <a class="links-hover curent-link" href="./index.html" title="Studio">Студия</a>
+                    <a class="nav-links links-hover curent-link" href="./index.html" title="Studio">Студия</a>
                 </li>
                 <li>
                     <a class="nav-links links-hover" href="./portfolio.html" title="Portfolio">Портфолио</a>
@@ -54,7 +54,7 @@
        
         <div class="conteiner">
             <h1>Эффективные решения для вашего бизнеса</h1>
-            <button type="button" class="btn" id="submit_res">Заказать услугу</button>
+            <button type="button" class="btn" id="submit_res" data-modal-open>Заказать услугу</button>
         </div>
       
     </section>
@@ -100,9 +100,18 @@
             <div class="conteiner">
             <h2>Чем мы занимаемся</h2>
             <ul class="list">
-                <li><img src="./images/img1.jpg" width="370"  alt="keyboard"></li>
-                <li><img src="./images/img2.jpg" width="370"  alt="smartphone"></li>
-                <li><img src="./images/img3.jpg" width="370"  alt="tablet"></li>
+                <li class="iner-img">
+                    <img src="./images/img1.jpg" width="370"  alt="keyboard">
+                    <div class="title-holder"><h3>Десктопные приложения</h3></div>
+                </li>
+                <li class="iner-img">
+                    <img src="./images/img2.jpg" width="370"  alt="smartphone">
+                    <div class="title-holder"><h3>Мобильные приложения</h3></div>
+                </li>
+                <li class="iner-img">
+                    <img src="./images/img3.jpg" width="370"  alt="tablet">
+                    <div class="title-holder"><h3>Дизайнерские решения</h3></div>
+                </li>
             </ul>
             </div>
        
@@ -258,7 +267,18 @@
     </div>
 </footer>
 
+<div class="Overlay is-hidden" data-modal>
+    <div class="modal">
+        <button class="modal-btn" data-modal-close>
+            <svg class="modal-btn-icon" style="width: 11px; height: 11px;">
+            <use href="./images/sprite.svg#icon-close-black"></use>
+            </svg>
+    </button>
+    </div>
 
+</div>
+
+<script src="./js/modal.js"></script>
 </body>
 
 </html>

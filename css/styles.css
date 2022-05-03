@@ -26,7 +26,6 @@ a {
 
 .links-hover:hover,
 .links-hover:focus {
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   color: var(--accent-text-color);
 }
 
@@ -160,7 +159,6 @@ nav + .list {
 .links-hover:hover .header-icon,
 .links-hover:focus .header-icon {
   fill: var(--accent-text-color);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* main */
 main {
@@ -222,7 +220,6 @@ main {
 .btn:hover,
 .btn:focus {
   background-color: #188ce8;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .our-advantages {
@@ -376,13 +373,11 @@ h2 {
 .social-links:hover,
 .social-links:focus {
   background-color: var(--accent-text-color);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-links:focus .social-links-icon,
 .social-links:hover .social-links-icon {
   fill: #fff;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-links + .social-links {
@@ -425,7 +420,6 @@ h2 {
   fill: var(--accent-text-color);
   border: 1px solid var(--accent-text-color);
   border-radius: 4px;
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* footer */
 footer {
@@ -507,7 +501,6 @@ address li + li {
 .social-links-footer:hover,
 .social-links-footer:focus {
   background-color: var(--accent-text-color);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-links-footer + .social-links-footer {
@@ -536,12 +529,17 @@ address li + li {
   height: 581px;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
 
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.Overlay.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(1.4);
 }
 
 .modal-btn {
@@ -564,7 +562,6 @@ address li + li {
 .modal-btn:focus .modal-btn-icon {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   fill: var(--accent-text-color);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), filter 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ____________________________________________Portfolio_________________________________________________________*/
@@ -621,8 +618,6 @@ address li + li {
     0px 2px 2px rgba(0, 0, 0, 0.12);
   background: var(--accent-text-color);
   color: var(--white-text-color);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .projects-card {
@@ -644,7 +639,6 @@ address li + li {
   height: 100%;
   width: 100%;
   background: rgba(33, 150, 243, 0.9);
-  border: 1px solid #000000;
   box-sizing: border-box;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   transform: translateY(100%);
@@ -671,13 +665,11 @@ address li + li {
 .projects-card-link:hover,
 .projects-card-link:focus {
   box-shadow: 0px 1px 1px rgb(0 0 0 /12%), 0px 4px 4px rgb(0 0 0 /6%), 1px 4px 6px rgb(0 0 0 /16%);
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .projects-card-link:hover .project-overlay,
 .projects-card-link:focus .project-overlay {
   transform: translateY(0);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-iner {
